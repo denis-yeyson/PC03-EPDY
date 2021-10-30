@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.denisyeyson.pc03_epdy.adaptador.ListaProductosAdapter;
 import com.denisyeyson.pc03_epdy.db.DbProductos;
 import com.denisyeyson.pc03_epdy.entidades.Productos;
 
@@ -29,6 +30,9 @@ public class PrincipalActivity extends AppCompatActivity {
 
         DbProductos dbInquilinos =  new DbProductos(PrincipalActivity.this);
         listaArrayProductos =  new ArrayList<>();
+
+        ListaProductosAdapter adapter=new ListaProductosAdapter(dbInquilinos.mostrarInquilinos());
+        listaProductos.setAdapter(adapter);
     }
 
     public boolean onCreateOptionsMenu(Menu menu){

@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.denisyeyson.pc03_epdy.R;
 import com.denisyeyson.pc03_epdy.entidades.Productos;
 
 import java.util.ArrayList;
@@ -23,17 +23,14 @@ public class ListaProductosAdapter extends RecyclerView.Adapter<ListaProductosAd
     @NonNull
     @Override
     public ProductoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_item_inquilino,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_producto,null,false);
         return new ProductoViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull InquilinoViewHolder holder, int position) {
-        holder.dni.setText("DNI: "+listaInquilinos.get(position).getDni());
-        holder.nombres.setText("Nombres: "+listaInquilinos.get(position).getApPaterno()+" "+listaProductos.get(position).getApMaterno()+" "+listaProductos.get(position).getNombres());
-        holder.telefono.setText("Telefono: "+listaInquilinos.get(position).getTelefono());
-        holder.correo.setText("Correo: "+listaInquilinos.get(position).getCorreo());
-        holder.deuda.setText("Deuda: "+listaInquilinos.get(position).getDeuda());
+    public void onBindViewHolder(@NonNull ProductoViewHolder holder, int position) {
+        holder.nombre.setText("nombre: "+listaProductos.get(position).getNombre());
+        holder.precio.setText("marca: "+listaProductos.get(position).getPrecioUnit());
     }
 
     @Override
@@ -42,14 +39,11 @@ public class ListaProductosAdapter extends RecyclerView.Adapter<ListaProductosAd
     }
 
     public class ProductoViewHolder extends RecyclerView.ViewHolder {
-        TextView dni,nombres,telefono,correo,deuda;
+        TextView nombre,precio;
         public ProductoViewHolder(@NonNull View itemView) {
             super(itemView);
-            nombres = itemView.findViewById(R.id.txtViewNombres);
-            dni = itemView.findViewById(R.id.txtViewDni);
-            telefono = itemView.findViewById(R.id.txtViewTelefono);
-            correo = itemView.findViewById(R.id.txtViewCorreo);
-            deuda = itemView.findViewById(R.id.txtViewDeuda);
+            nombre = itemView.findViewById(R.id.txtViewNombre);
+            precio = itemView.findViewById(R.id.txtViewPrecio);
         }
     }
 }
