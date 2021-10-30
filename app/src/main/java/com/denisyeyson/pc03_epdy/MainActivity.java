@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.denisyeyson.pc03_epdy.db.DbHelper;
 
+//Clase MainActivity
 public class MainActivity extends AppCompatActivity {
 
     Button ingresar;
