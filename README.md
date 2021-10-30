@@ -4,7 +4,7 @@ _Pactica Calificada 3 usando SQL Lite._
 
 ### Video de App en funcionamiento 📹
 
-<img src="https://i.imgur.com/2aeZLFQ.gif" width="288" height="640" />
+<img src="https://i.imgur.com/WlC8WAH.gif" width="288" height="640" />
 
 ### APK compilado
 
